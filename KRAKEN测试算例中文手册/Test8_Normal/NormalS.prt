@@ -1,0 +1,42 @@
+ _________________________________________________
+
+ SCOOTER-Mode normalization test                                                 
+ Frequency =   10.00    Hz
+ NMedia    =   2
+
+
+     N2-Linear approximation to SSP
+     Attenuation units: dB/mkHz
+     VACUUM
+
+
+   z (m)     alphaR (m/s)   betaR  rho (g/cm^3)  alphaI     betaI
+
+
+       ( # mesh points =   300  RMS rough =   0.00     )
+      0.00      1500.00      0.00     1.00       0.0000    0.0000
+   3000.00      1500.00      0.00     1.00       0.0000    0.0000
+
+       ( # mesh points =   200  RMS rough =   0.00     )
+   3000.00      1500.00      0.00     2.00       0.0000    0.0000
+   5000.00      1500.00      0.00     2.00       0.0000    0.0000
+
+                                 ( RMS rough =   0.00     )
+     ACOUSTO-ELASTIC half-space
+   5000.00      4000.00   2000.00     3.00       0.0000    0.0000
+
+ cLow =   1400.0    m/s      cHigh =   2000.0    m/s
+ RMax =    1000.0000000000000      km
+
+ __________________________________________________________________________
+
+
+ Number of source   depths =            1
+ Source depths (m)
+   500.000    
+
+ Number of receiver depths =            1
+ Receiver depths (m)
+   2500.00    
+ Nk =         8571
+ CPU Time:     0.25000    s   ---cumulative

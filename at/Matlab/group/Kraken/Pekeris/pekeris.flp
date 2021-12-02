@@ -1,0 +1,13 @@
+/                                                               ! Title
+'RA'                                                            ! Option
+4                                                          ! Mlimit
+1                                                               ! NPROF
+0.000                                                           ! RPROF(1:NPROF) (km)
+401                     /! NR
+0 20                    /! R(1:NR)
+1                                                               ! NSD
+    10.000 /                                                    ! SD(1:NSD) (m)
+534                     /! NRD 
+0.000  100.000      / ! receiver depth 
+601                                                             ! NRR
+     0.000      0.000 /                                         ! RR(1:NRR) (m)

@@ -1,0 +1,13 @@
+/                                                               ! Title
+'RA'                                                            ! Option
+4                                                          ! Mlimit
+1                                                               ! NPROF
+0.000                                                           ! RPROF(1:NPROF) (km)
+1001                                                            ! NR
+     0.000     15.000 /                                         ! R(1:NR)   (km)
+1                                                               ! NSD
+    10.000 /                                                    ! SD(1:NSD) (m)
+601                                                             ! NRD
+     0.000     60.000 /                                         ! RD(1:NRD) (m)
+601                                                             ! NRR
+     0.000      0.000 /                                         ! RR(1:NRR) (m)

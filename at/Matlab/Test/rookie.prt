@@ -1,0 +1,158 @@
+ BELLHOP/BELLHOP3D
+
+ BELLHOP- My profile                                                             
+ frequency =   50.00     Hz
+
+ Dummy parameter NMedia =            1
+
+     Spline approximation to SSP
+     Attenuation units: nepers/m
+     VACUUM
+
+ Depth =    5000.00 m
+
+ Sound speed profile:
+   z (m)     alphaR (m/s)   betaR  rho (g/cm^3)  alphaI     betaI
+
+      0.00      1548.52      0.00     1.00       0.0000    0.0000
+    200.00      1530.29      0.00     1.00       0.0000    0.0000
+    250.00      1526.69      0.00     1.00       0.0000    0.0000
+    400.00      1517.78      0.00     1.00       0.0000    0.0000
+    600.00      1509.49      0.00     1.00       0.0000    0.0000
+    800.00      1504.30      0.00     1.00       0.0000    0.0000
+   1000.00      1501.38      0.00     1.00       0.0000    0.0000
+   1200.00      1500.14      0.00     1.00       0.0000    0.0000
+   1400.00      1500.12      0.00     1.00       0.0000    0.0000
+   1600.00      1501.02      0.00     1.00       0.0000    0.0000
+   1800.00      1502.57      0.00     1.00       0.0000    0.0000
+   2000.00      1504.62      0.00     1.00       0.0000    0.0000
+   2200.00      1507.02      0.00     1.00       0.0000    0.0000
+   2400.00      1509.69      0.00     1.00       0.0000    0.0000
+   2600.00      1512.55      0.00     1.00       0.0000    0.0000
+   2800.00      1515.56      0.00     1.00       0.0000    0.0000
+   3000.00      1518.67      0.00     1.00       0.0000    0.0000
+   3200.00      1521.85      0.00     1.00       0.0000    0.0000
+   3400.00      1525.10      0.00     1.00       0.0000    0.0000
+   3600.00      1528.38      0.00     1.00       0.0000    0.0000
+   3800.00      1531.70      0.00     1.00       0.0000    0.0000
+   4000.00      1535.04      0.00     1.00       0.0000    0.0000
+   4200.00      1538.39      0.00     1.00       0.0000    0.0000
+   4400.00      1541.76      0.00     1.00       0.0000    0.0000
+   4600.00      1545.14      0.00     1.00       0.0000    0.0000
+   4800.00      1548.52      0.00     1.00       0.0000    0.0000
+   5000.00      1551.91      0.00     1.00       0.0000    0.0000
+
+                                 ( RMS roughness =   0.00     )
+     VACUUM
+
+ __________________________________________________________________________
+
+ Number of Source   depths, Sz =            1
+ Source   depths, Sz (m)
+   1000.00    
+
+
+ __________________________________________________________________________
+
+ Number of Receiver depths, Rz =           50
+ Receiver depths, Rz (m)
+   0.00000       102.041       204.082       306.122       408.163    
+   510.204       612.245       714.286       816.327       918.367    
+          ... 
+   5000.00    
+
+
+ __________________________________________________________________________
+
+ Number of Receiver ranges, Rr =          501
+ Receiver ranges, Rr (km)
+   0.00000      0.200000      0.400000      0.600000      0.800000    
+   1.00000       1.20000       1.40000       1.60000       1.80000    
+          ... 
+   100.000    
+
+
+ Coherent TL calculation
+ Geometric hat beams in Cartesian coordinates
+ Point source (cylindrical coordinates)
+ Rectilinear receiver grid: Receivers at Rr( : ) x Rz( : )
+ __________________________________________________________________________
+
+ Number of beams in elevation   =           51
+ Beam take-off angles (degrees)
+  -11.0000      -10.5600      -10.1200      -9.68000      -9.24000    
+  -8.80000      -8.36000      -7.92000      -7.48000      -7.04000    
+          ... 
+   11.0000    
+
+ __________________________________________________________________________
+
+
+ Step length,       deltas =   200.0     m
+
+ Maximum ray depth, Box%z  =   5500.     m
+ Maximum ray range, Box%r  =   101.0    km
+ No beam shift in effect
+
+
+ Warning in BELLHOP : Too few beams
+ Nalpha should be at least =           56
+Tracing beam       1    -11.00
+
+ Geometric hat beams                     
+ halfwidth  =    1244.6312620658107     
+ epsilonOpt =  (  0.0000000000000000     ,  243333155.16582617     )
+ EpsMult    =    1.0000000000000000     
+
+Tracing beam       2    -10.56
+Tracing beam       3    -10.12
+Tracing beam       4     -9.68
+Tracing beam       5     -9.24
+Tracing beam       6     -8.80
+Tracing beam       7     -8.36
+Tracing beam       8     -7.92
+Tracing beam       9     -7.48
+Tracing beam      10     -7.04
+Tracing beam      11     -6.60
+Tracing beam      12     -6.16
+Tracing beam      13     -5.72
+Tracing beam      14     -5.28
+Tracing beam      15     -4.84
+Tracing beam      16     -4.40
+Tracing beam      17     -3.96
+Tracing beam      18     -3.52
+Tracing beam      19     -3.08
+Tracing beam      20     -2.64
+Tracing beam      21     -2.20
+Tracing beam      22     -1.76
+Tracing beam      23     -1.32
+Tracing beam      24     -0.88
+Tracing beam      25     -0.44
+Tracing beam      26      0.00
+Tracing beam      27      0.44
+Tracing beam      28      0.88
+Tracing beam      29      1.32
+Tracing beam      30      1.76
+Tracing beam      31      2.20
+Tracing beam      32      2.64
+Tracing beam      33      3.08
+Tracing beam      34      3.52
+Tracing beam      35      3.96
+Tracing beam      36      4.40
+Tracing beam      37      4.84
+Tracing beam      38      5.28
+Tracing beam      39      5.72
+Tracing beam      40      6.16
+Tracing beam      41      6.60
+Tracing beam      42      7.04
+Tracing beam      43      7.48
+Tracing beam      44      7.92
+Tracing beam      45      8.36
+Tracing beam      46      8.80
+Tracing beam      47      9.24
+Tracing beam      48      9.68
+Tracing beam      49     10.12
+Tracing beam      50     10.56
+Tracing beam      51     11.00
+
+ CPU Time =       0.156E-01s
