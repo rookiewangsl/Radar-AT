@@ -109,12 +109,12 @@ fprintf(fid,'%.3f  %.3f / ! receiver depth \n',rcv_depth);
 fclose(fid);
 
 end
-
-function str = mkstr(str1, str2, str2_start)
-len = length(str1);
-while str2_start <= len
-    str2_start = str2_start + 4;
+% produce one line for env file
+function line = mkstr(info, note, note_pos)
+len = length(info);
+while note_pos <= len
+    note_pos = note_pos + 4;
 end
-dummy = char(32*ones(1,str2_start-len-1));
-str = [str1, dummy, str2];
+space = char(32*ones(1,note_pos-len-1)); 
+line = [info, space, note];
 end

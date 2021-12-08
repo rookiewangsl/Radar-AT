@@ -164,4 +164,4 @@ if ( jkpsflag )
    %     set( gcf, 'PaperPositionMode', 'manual' );
    %     set( gcf, 'PaperPosition', [ 3 3 15.0 10.0 ] )
 end
-saveas(gcf,'shd.jpg');
+% saveas(gcf,'shd.jpg');

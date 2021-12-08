@@ -33,13 +33,13 @@
 
  Number of receiver depths =            1
  Receiver depths (m)
-   2500.00    
+   2000.00    
 
  Mesh multiplier   CPU seconds
                 --- Number of modes =           44
         1             0.00    s
                 --- Number of modes =           44
-        2            0.156E-01s
+        2             0.00    s
 
     I    k (1/m)            alpha (1/m)   Phase Speed (m/s) Group Speed (m/s)
     1  0.4188332253E-01   0.000000000       1500.164010       1499.846663    

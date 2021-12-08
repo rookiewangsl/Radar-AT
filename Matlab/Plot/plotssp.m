@@ -22,5 +22,5 @@ set( gca, 'YDir', 'Reverse' )   % because view messes up the zoom feature
 
 xlabel( 'Sound Speed (m/s)' )
 ylabel( 'Depth (m)' )
-saveas(gcf,'ssp.jpg')
+% saveas(gcf,'ssp.jpg')
 

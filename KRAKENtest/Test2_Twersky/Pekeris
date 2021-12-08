@@ -1,0 +1,5 @@
+'Sand Bottom'                                    ! TITLE
+10.0                                             ! FREQ (Hz)
+1                                                ! NMEDIA (default:1)
+'NVF'                                            ! TOP OPTION
+500  0.000  5000.000                             ! NMESH  SIGMA  ZMAX
