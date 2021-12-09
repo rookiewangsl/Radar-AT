@@ -33,7 +33,7 @@ else
   tlslice = interp1( Pos.r.range, TLtemp, 1000.0 * rrt );
 end
 
-hh= plot( tlslice, Pos.r.z );
+hh= plot( tlslice, Pos.r.depth );
 set( gca, 'YDir', 'Reverse' )   % because view messes up the zoom feature
 set( gca, 'Xdir', 'Reverse' )
 xlabel( 'TL (dB)'   )

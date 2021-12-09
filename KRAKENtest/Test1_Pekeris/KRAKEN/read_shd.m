@@ -21,6 +21,8 @@ function [ PlotTitle, PlotType, freqVec, atten, Pos, pressure ] = read_shd( vara
 % Determine type of file:
 
 %error( nargchk( 1, 3, nargin, 'struct' ) );
+% disp("Number of input arguments: " + nargin)
+% celldisp(varargin)
 narginchk( 1, 3 )
 
 filename = varargin{1};
