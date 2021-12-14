@@ -13,10 +13,10 @@ fclose all;
 % SD,RD: double arrays
 
 FILENAME = 'Pekeris';
-K = 21;
+K = 1;
 % FREQ = logspace(1, 2, K);
-% FREQ = 10;
-FREQ = linspace(10, 30, K);
+FREQ = 20;
+% FREQ = linspace(10, 30, K);
 TOPOPT = 'NVF';
 
 MEDIA.nmesh = 0;
@@ -52,10 +52,8 @@ myenv(FILENAME, FREQ(1), TOPOPT, MEDIA, BOTTOM, ...
       PSMIN, PSMAX, RMAX, NSD, SD, NRD, RD);
 
 %% write flp file
-% function  myflp(FILENAME,  Opt, NModes, NProf, ...
-%                 RProf, RMin, RMax, NSD, SD, NRD, RD)
+% function  myflp(FILENAME,  Opt, NModes, NProf, RProf, RMin, RMax, NSD, SD, NRD, RD)
 %  Opt: string
-%
 Opt = 'RA';
 NModes = 100;
 NProf = 1;
@@ -65,44 +63,44 @@ NRR = 0;
 myflp(FILENAME,  Opt, NModes, NProf, ...
       RProf, NR, RMin, RMax, NSD, SD, NRD, RD, NRR);
 
-%% 信号生成
-
+%% input signal
 T = 1;
 N = 1024;
 fs = N / T;
-t = linspace(0, 1, N);
+t = linspace(0, T, N);
 
-freq = 20;
-sig = cos(2 * pi * freq * t);
-% sig=exp(1i*2*pi*freq*t);
-plot(t, sig);
+freq = [20];
+sig = cos(2 * pi * freq.' * t);
+% sig = exp(1i*2 * pi * freq.' * t);
+sig = sum(sig, 1);
 
+a = 10;
+sig = [zeros(1, N), sig, zeros(1, a * N - 2 * N)];
 
-% 信号频谱
+N=a*N;
+T=a*T;
+t = linspace(0, T, N);
+
+%% signal spectrum
 sigf = fft(sig);
-% figure()
-% plot(abs(sigf));
-% sigt=ifft(sigf,'symmetric');
-% figure()
-% plot(t,sigt);
+save('sigf.mat', 'sigf');
+freqs=find((abs(sigf)/max(abs(sigf)))>)
 
-save('sigf.mat','sigf');
-P2 = abs(sigf / N);
-figure();
-plot(P2);
-P1 = P2(1:N / 2 + 1);
-P1(2:end - 1) = 2 * P1(2:end - 1);
+%% single side band
+% P2 = abs(sigf / N);
+% P1 = P2(1:N / 2 + 1);
+% P1( 2 : end - 1) = 2 * P1( 2 : end - 1);
 
-f = fs * (0:(N / 2)) / N;
-figure()
-plot(f, P1);
-title('Single-Sided Amplitude Spectrum');
-xlabel('f (Hz)');
-% xlim([0, 200]);
-ylabel('|P1(f)|');
+% f = fs * (0:(N / 2)) / N;
+% figure()
+% plot(f, P1);
+% title('Single-Sided Amplitude Spectrum');
+% xlabel('f (Hz)');
+% % xlim([0, 200]);
+% ylabel('|P1(f)|');
 
 %% system计算和plot调用
-% 
+%
 % % include kraken.exe and field.exe
 kraken(FILENAME);
 % % field(FILENAME,modes) calculate the specified modes; produce a mat file
@@ -110,8 +108,8 @@ kraken(FILENAME);
 % %     grf(i)=getgrf(S.pressure,xs,ys);
 % %       field(FILENAME,4);
 
-%% 画图和保存
-close all;
+%% plot figures
+
 figure();
 specgram(sig);
 plotssp(FILENAME);
@@ -130,9 +128,7 @@ plottld(shdfilename, xs);
 figure();
 plottlr(shdfilename, ys);
 
-%%
-% [ PlotTitle, ~, ~, ~, Pos, pressure ] = read_shd([FILENAME,'.shd'] );
-
+%% frequency response
 % pressure(freq,theta,source,NRD,NR)
 pressure = zeros(1, 1, NRD, NR);
 grf = zeros(1, K);
@@ -141,26 +137,39 @@ for i = 1:K
           PSMIN, PSMAX, RMax, NSD, SD, NRD, RD);
     myflp(FILENAME,  Opt, NModes, NProf, ...
           RProf, NR, RMin, RMax, NSD, SD, NRD, RD, NRR);
-     % calculate diff freq, reference the kraken.m
-     kraken (FILENAME);
+    kraken (FILENAME);
     [~, ~, ~, ~, ~, pressure] = read_shd(shdfilename);
     grf(i) = getgrf(pressure, xs, ys);
     disp(i);
 end
-save('grf.mat','grf');
+save('grf.mat', 'grf');
 % figure()
 % plot(FREQ,mag2db(abs(grf)));
 
 %% output
-load 'sigf.mat' sigf
-load 'grf.mat' grf
+close all
+% load('sigf.mat', 'sigf')
+% load('grf.mat', 'grf')
 
-% figure()
-% plot(FREQ,abs(grf));
-% stem(FREQ,abs(grf));
-% figure()
-% plot(abs(sigf));
-kmin=(FREQ(end)-)
+% position of grf in double-side spectrum
+k=zeros(1,K);
+g=zeros(1,N);
+for i=1:K
+    k(i)=N*FREQ(i)/fs+1;
+    g(k(i))=grf(i);
+end
 
+figure()
+plot(abs(g));
+figure()
+plot(abs(sigf));
 
+yf = g .* sigf;
+figure()
+plot(abs(yf));
+yt = ifft(yf, 'symmetric');
 
+figure();
+plot(t, sig);
+figure();
+plot(t, yt);
