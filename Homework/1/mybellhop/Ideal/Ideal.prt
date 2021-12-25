@@ -1,0 +1,130 @@
+ BELLHOP/BELLHOP3D
+
+ BELLHOP- Ideal                                                                  
+ frequency =   22.67     Hz
+
+ Dummy parameter NMedia =            1
+
+     Spline approximation to SSP
+     Attenuation units: nepers/m
+     VACUUM
+
+ Depth =    5000.00 m
+
+ Sound speed profile:
+   z (m)     alphaR (m/s)   betaR  rho (g/cm^3)  alphaI     betaI
+
+      0.00      1500.00      0.00     1.00       0.0000    0.0000
+   5000.00      1500.00      0.00     1.00       0.0000    0.0000
+
+                                 ( RMS roughness =   0.00     )
+     VACUUM
+
+ __________________________________________________________________________
+
+ Number of Source   depths, Sz =            1
+ Source   depths, Sz (m)
+   500.000    
+
+
+ __________________________________________________________________________
+
+ Number of Receiver depths, Rz =         1000
+ Receiver depths, Rz (m)
+   0.00000       5.00500       10.0100       15.0150       20.0200    
+   25.0250       30.0300       35.0350       40.0400       45.0450    
+          ... 
+   5000.00    
+
+
+ __________________________________________________________________________
+
+ Number of Receiver ranges, Rr =          500
+ Receiver ranges, Rr (km)
+   0.00000      0.200401      0.400802      0.601202      0.801603    
+   1.00200       1.20240       1.40281       1.60321       1.80361    
+          ... 
+   100.000    
+
+
+ Coherent TL calculation
+ Geometric hat beams in Cartesian coordinates
+ Point source (cylindrical coordinates)
+ Rectilinear receiver grid: Receivers at Rr( : ) x Rz( : )
+ __________________________________________________________________________
+
+ Number of beams in elevation   =          100
+ Beam take-off angles (degrees)
+  -11.0000      -10.7778      -10.5556      -10.3333      -10.1111    
+  -9.88889      -9.66667      -9.44444      -9.22222      -9.00000    
+          ... 
+   11.0000    
+
+ __________________________________________________________________________
+
+
+ Step length,       deltas =   200.0     m
+
+ Maximum ray depth, Box%z  =   5500.     m
+ Maximum ray range, Box%r  =   101.0    km
+ No beam shift in effect
+
+
+Tracing beam       1    -11.00
+
+ Geometric hat beams                     
+ halfwidth  =    5431.1054597907878     
+ epsilonOpt =  (  0.0000000000000000     ,  2100461091.3211715     )
+ EpsMult    =    1.0000000000000000     
+
+Tracing beam       3    -10.56
+Tracing beam       5    -10.11
+Tracing beam       7     -9.67
+Tracing beam       9     -9.22
+Tracing beam      11     -8.78
+Tracing beam      13     -8.33
+Tracing beam      15     -7.89
+Tracing beam      17     -7.44
+Tracing beam      19     -7.00
+Tracing beam      21     -6.56
+Tracing beam      23     -6.11
+Tracing beam      25     -5.67
+Tracing beam      27     -5.22
+Tracing beam      29     -4.78
+Tracing beam      31     -4.33
+Tracing beam      33     -3.89
+Tracing beam      35     -3.44
+Tracing beam      37     -3.00
+Tracing beam      39     -2.56
+Tracing beam      41     -2.11
+Tracing beam      43     -1.67
+Tracing beam      45     -1.22
+Tracing beam      47     -0.78
+Tracing beam      49     -0.33
+Tracing beam      51      0.11
+Tracing beam      53      0.56
+Tracing beam      55      1.00
+Tracing beam      57      1.44
+Tracing beam      59      1.89
+Tracing beam      61      2.33
+Tracing beam      63      2.78
+Tracing beam      65      3.22
+Tracing beam      67      3.67
+Tracing beam      69      4.11
+Tracing beam      71      4.56
+Tracing beam      73      5.00
+Tracing beam      75      5.44
+Tracing beam      77      5.89
+Tracing beam      79      6.33
+Tracing beam      81      6.78
+Tracing beam      83      7.22
+Tracing beam      85      7.67
+Tracing beam      87      8.11
+Tracing beam      89      8.56
+Tracing beam      91      9.00
+Tracing beam      93      9.44
+Tracing beam      95      9.89
+Tracing beam      97     10.33
+Tracing beam      99     10.78
+
+ CPU Time =       0.312    s
